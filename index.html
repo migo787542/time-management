@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>⏰ Time Management</h1>
+        <p>نظّم وقتك، وأنجز مهامك بسهولة</p>
+    </header>
+
+    <main>
+
+        <section class="welcome">
+            <h2>أهلاً بيك 👋</h2>
+            <p>ابدأ بتنظيم يومك وخلي وقتك في إيدك.</p>
+        </section>
+
+        <section class="stats">
+
+            <div class="card">
+                <span>📋</span>
+                <h3>المهام</h3>
+                <p id="taskCount">0</p>
+            </div>
+
+            <div class="card">
+                <span>✅</span>
+                <h3>المكتملة</h3>
+                <p id="completedCount">0</p>
+            </div>
+
+            <div class="card">
+                <span>📊</span>
+                <h3>نسبة الإنجاز</h3>
+                <p id="progress">0%</p>
+            </div>
+
+        </section>
+
+        <section class="tasks">
+
+            <h2>📝 مهامي اليوم</h2>
+
+            <div class="task-input">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="اكتب المهمة هنا..."
+                >
+
+                <button onclick="addTask()">
+                    إضافة المهمة
+                </button>
+            </div>
+
+            <ul id="taskList"></ul>
+
+        </section>
+
+        <section class="timer">
+
+            <h2>⏱️ مؤقت التركيز</h2>
+
+            <div id="timerDisplay">
+                25:00
+            </div>
+
+            <button onclick="startTimer()">
+                ▶️ ابدأ
+            </button>
+
+            <button onclick="pauseTimer()">
+                ⏸️ إيقاف
+            </button>
+
+            <button onclick="resetTimer()">
+                🔄 إعادة
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Time Management</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

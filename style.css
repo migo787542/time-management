@@ -1,0 +1,496 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f7fb;
+
+    color: #222;
+
+    min-height: 100vh;
+
+    transition: 0.3s;
+}
+
+
+header {
+    background: linear-gradient(
+        135deg,
+        #4facfe,
+        #667eea
+    );
+
+    color: white;
+
+    padding: 30px;
+
+    border-radius: 0 0 30px 30px;
+}
+
+
+.header-top {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+header h1 {
+    font-size: 35px;
+
+    margin-bottom: 8px;
+}
+
+
+header p {
+    font-size: 17px;
+
+    opacity: 0.9;
+}
+
+
+.theme-button {
+    width: 50px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.2);
+
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.theme-button:hover {
+    transform: scale(1.1);
+}
+
+
+.date-box {
+    text-align: center;
+
+    margin-top: 25px;
+}
+
+
+#clock {
+    font-size: 32px;
+
+    font-weight: bold;
+}
+
+
+#date {
+    margin-top: 5px;
+
+    font-size: 16px;
+}
+
+
+main {
+    max-width: 1000px;
+
+    margin: 30px auto;
+
+    padding: 0 20px;
+}
+
+
+.welcome {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+.welcome h2 {
+    margin-bottom: 10px;
+}
+
+
+.stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.card {
+    background: white;
+
+    padding: 25px 15px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+.card span {
+    font-size: 30px;
+}
+
+
+.card h3 {
+    margin: 10px 0;
+}
+
+
+.card p {
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+
+.coins-card {
+    border: 2px solid #f5c542;
+}
+
+
+.level-section {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+.level-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+    font-size: 16px;
+}
+
+
+.level-bar {
+    height: 14px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.level-progress {
+    height: 100%;
+
+    width: 0%;
+
+    background: linear-gradient(
+        90deg,
+        #f6c453,
+        #ff9f43
+    );
+
+    border-radius: 20px;
+
+    transition: width 0.5s;
+}
+
+
+.tasks,
+.timer {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+
+.tasks h2,
+.timer h2 {
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+
+.task-input {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.task-input input {
+    flex: 1;
+
+    padding: 14px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+.task-input input:focus {
+    border-color: #667eea;
+}
+
+
+button {
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 12px 18px;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+
+#taskList {
+    list-style: none;
+}
+
+
+#taskList li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px;
+
+    margin-bottom: 10px;
+
+    background: #f7f8fc;
+
+    border-radius: 12px;
+}
+
+
+.task-name {
+    flex: 1;
+
+    font-size: 16px;
+}
+
+
+.completed {
+    text-decoration: line-through;
+
+    opacity: 0.5;
+}
+
+
+.delete-btn {
+    background: #e74c3c;
+
+    padding: 8px 12px;
+}
+
+
+.timer {
+    text-align: center;
+}
+
+
+#timerDisplay {
+    font-size: 70px;
+
+    font-weight: bold;
+
+    margin: 20px 0;
+
+    direction: ltr;
+}
+
+
+.timer-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.timer-buttons button:nth-child(2) {
+    background: #f39c12;
+}
+
+
+.timer-buttons button:nth-child(3) {
+    background: #e74c3c;
+}
+
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    opacity: 0.7;
+}
+
+
+/* ========================= */
+/* الوضع الليلي */
+/* ========================= */
+
+body.dark {
+    background: #121826;
+
+    color: #eee;
+}
+
+
+body.dark .welcome,
+body.dark .card,
+body.dark .level-section,
+body.dark .tasks,
+body.dark .timer {
+    background: #1d2638;
+
+    color: #eee;
+}
+
+
+body.dark #taskList li {
+    background: #273247;
+}
+
+
+body.dark .task-input input {
+    background: #273247;
+
+    color: white;
+
+    border-color: #3d4b66;
+}
+
+
+body.dark .level-bar {
+    background: #303b50;
+}
+
+
+/* ========================= */
+/* الموبايل */
+/* ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 25px 15px;
+    }
+
+
+    header h1 {
+        font-size: 27px;
+    }
+
+
+    .stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .task-input {
+        flex-direction: column;
+    }
+
+
+    .task-input button {
+        width: 100%;
+    }
+
+
+    #timerDisplay {
+        font-size: 55px;
+    }
+
+
+    .level-info {
+        font-size: 14px;
+    }
+}
