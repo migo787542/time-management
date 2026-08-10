@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Time Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="header-top">
+
+            <div>
+                <h1>⏰ Time Management</h1>
+
+                <p>
+                    نظّم وقتك، وأنجز مهامك بسهولة
+                </p>
+            </div>
+
+            <button
+                class="theme-button"
+                onclick="toggleDarkMode()"
+                id="themeButton">
+                🌙
+            </button>
+
+        </div>
+
+        <div class="date-box">
+
+            <div id="clock">
+                00:00:00
+            </div>
+
+            <div id="date">
+                ...
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="welcome">
+
+            <h2>أهلاً بيك 👋</h2>
+
+            <p>
+                ابدأ بتنظيم يومك وخلي وقتك في إيدك.
+            </p>
+
+        </section>
+
+
+        <section class="stats">
+
+            <div class="card">
+
+                <span>📋</span>
+
+                <h3>المهام</h3>
+
+                <p id="taskCount">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span>✅</span>
+
+                <h3>المكتملة</h3>
+
+                <p id="completedCount">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <span>📊</span>
+
+                <h3>نسبة الإنجاز</h3>
+
+                <p id="progress">
+                    0%
+                </p>
+
+            </div>
+
+
+            <div class="card coins-card">
+
+                <span>🪙</span>
+
+                <h3>Coins</h3>
+
+                <p id="coins">
+                    0
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="level-section">
+
+            <div class="level-info">
+
+                <span>
+                    ⭐ المستوى:
+                </span>
+
+                <strong id="level">
+                    1
+                </strong>
+
+                <span>
+                    🪙 <span id="levelCoins">0</span> / 100
+                </span>
+
+            </div>
+
+            <div class="level-bar">
+
+                <div
+                    id="levelProgress"
+                    class="level-progress">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="tasks">
+
+            <h2>📝 مهامي اليوم</h2>
+
+
+            <div class="task-input">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="اكتب المهمة هنا...">
+
+                <button onclick="addTask()">
+                    إضافة المهمة
+                </button>
+
+            </div>
+
+
+            <ul id="taskList"></ul>
+
+        </section>
+
+
+        <section class="timer">
+
+            <h2>⏱️ مؤقت التركيز</h2>
+
+            <div id="timerDisplay">
+                25:00
+            </div>
+
+
+            <div class="timer-buttons">
+
+                <button onclick="startTimer()">
+                    ▶️ ابدأ
+                </button>
+
+                <button onclick="pauseTimer()">
+                    ⏸️ إيقاف
+                </button>
+
+                <button onclick="resetTimer()">
+                    🔄 إعادة
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Time Management
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
