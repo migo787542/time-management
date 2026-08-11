@@ -1,4 +1,3 @@
-```javascript
 let tasks =
     JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -91,7 +90,6 @@ function showTasks() {
             document.createElement("li");
 
         li.innerHTML = `
-
             <input
                 type="checkbox"
                 ${task.completed ? "checked" : ""}
@@ -111,7 +109,6 @@ function showTasks() {
                 onclick="deleteTask(${index})">
                 حذف
             </button>
-
         `;
 
         list.appendChild(li);
@@ -509,4 +506,3 @@ setInterval(
     updateClock,
     1000
 );
-```
